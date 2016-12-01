@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+
+    android:background="?attr/colorControlHighlight">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Recipe Search"
+        android:id="@+id/TopText"
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:textSize="25sp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:id="@+id/andImage" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:inputType="textPersonName"
+                android:text="Search"
+                android:ems="10"
+                android:id="@+id/SearchText" />
+
+            <ExpandableListView
+                android:layout_weight="3.70"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:id="@+id/eLV">
+
+            </ExpandableListView>
+
+            <Button
+                android:text="Go"
+                android:layout_width="108dp"
+                android:layout_height="40dp"
+                android:id="@+id/GoButt" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="108dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="Meal Type:"
+                android:ems="10"
+                android:id="@+id/MealType" />
+
+            <CheckBox
+                android:text="Breakfast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/BkfCheck"
+                android:layout_weight="1" />
+
+            <CheckBox
+                android:text="Lunch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/LunchCheck"
+                android:layout_weight="1" />
+
+            <CheckBox
+                android:text="Dinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/DinnerCheck"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="82dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="Allergy"
+                android:ems="10"
+                android:id="@+id/AllergyText" />
+
+            <CheckBox
+                android:text="No Peanut"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/PeanutCh" />
+
+            <CheckBox
+                android:text="No Dairy"
+                android:layout_width="82dp"
+                android:layout_height="45dp"
+                android:id="@+id/DairyCh" />
+
+            <CheckBox
+                android:text="No Seafood"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:id="@+id/SeaCheck" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:layout_width="88dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="Ingredients"
+                    android:ems="10"
+                    android:id="@+id/IngredientsText" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="Type any keyword"
+                    android:ems="10"
+                    android:id="@+id/KeywordText"
+                    android:layout_weight="1"
+                    android:background="@android:color/background_light"
+                    android:textAlignment="center" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:text="Back to homapage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/BackButton"
+                android:background="?attr/colorControlHighlight" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+
+    </RelativeLayout>

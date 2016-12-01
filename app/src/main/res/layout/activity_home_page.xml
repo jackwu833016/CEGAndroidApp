@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_home_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id=""
+        android:clickable="false">
+
+        <ImageView
+            android:layout_width="80dp"
+            app:srcCompat="@mipmap/ic_launcher"
+            android:layout_marginTop="30dp"
+            android:id="@+id/logo"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:text="Cook Helper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/appName"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:fontFamily="sans-serif"
+            android:textSize="34sp"
+            android:textAlignment="center"
+            android:layout_marginTop="15dp" />
+
+        <Button
+            android:text="My Profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/profileButton"
+            android:elevation="24dp"
+            android:layout_marginTop="75dp" />
+
+        <Button
+            android:text="Find a Recipe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchButton"
+            android:elevation="24dp"
+            android:layout_marginTop="15dp" />
+
+        <Button
+            android:text="Add New Recipe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addButton"
+            android:layout_marginTop="15dp" />
+
+    </LinearLayout>
+</RelativeLayout>
