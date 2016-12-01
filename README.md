@@ -1,3 +1,3 @@
-# CEGAndroidApp
+# SEGAndroidApp
 
-CEG android app 
+SEG android app 
