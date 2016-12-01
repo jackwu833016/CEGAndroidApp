@@ -1,3 +1,0 @@
-# SEGAndroidApp
-
-SEG android app 
