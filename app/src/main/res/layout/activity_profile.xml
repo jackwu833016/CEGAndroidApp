@@ -26,7 +26,8 @@
         android:id="@+id/button2"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:onClick="goToProfileEdit" />
 
     <TextView
         android:text="Name"
@@ -71,6 +72,7 @@
         android:background="@android:color/holo_green_light"
         android:layout_alignParentBottom="true"
         android:layout_toLeftOf="@+id/imageView"
-        android:layout_toStartOf="@+id/imageView" />
+        android:layout_toStartOf="@+id/imageView"
+        android:onClick="goToHomepage" />
 
 </RelativeLayout>
