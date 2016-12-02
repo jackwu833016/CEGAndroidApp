@@ -2,6 +2,7 @@ package ca.uottawa.segapp;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             if(!valid) {
                 showInvalidMessage();
             } else {
-                Toast.makeText(MainActivity.this, "Login successful!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Login successful!", Toast.LENGTH_SHORT).show(); startHomePage();
             }
 
         } else if (view.getId() == R.id.btn_sign_up) {
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
             if(!valid) {
                 showInvalidMessage();
             } else {
-                Toast.makeText(MainActivity.this, "Sign Up successful!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Sign Up successful!", Toast.LENGTH_SHORT).show(); startHomePage();
             }
         }
 
@@ -73,6 +74,12 @@ public class MainActivity extends AppCompatActivity {
                 .create()
                 .show();
     }
+
+    public void startHomePage() {
+        Intent i = new Intent(MainActivity.this, HomePage.class);
+        startActivity(i);
+    }
+
 
 
 }

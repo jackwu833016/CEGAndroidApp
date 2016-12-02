@@ -6,40 +6,38 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.view.View.OnClickListener;
+import android.widget.Toast;
 
 
 import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 public class HomePage extends AppCompatActivity {
-    Button button1;
-    Button button2;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // Get the view from activity_main.xml
         setContentView(R.layout.activity_home_page);
+    }
+    public void goToProfile(View view) {
 
-        // Locate the button in activity_main.xml
-        button1 = (Button) findViewById(R.id.searchButton);
-        button2 = (Button) findViewById(R.id.profileButton);
+        if (view.getId() == R.id.profileButton) {
+            startProfile();
 
-        // Capture button clicks
-        button1.setOnClickListener(new OnClickListener() {
-            public void onClick(View arg0) {
+        }
+    }
+    public void goToSearch(View view) {
 
-                // Start NewActivity.class
-                Intent myIntent = new Intent(HomePage.this, ReceipeSearch.class);
-                startActivity(myIntent);
-            }
-        });
-        button2.setOnClickListener(new OnClickListener() {
-            public void onClick(View arg0) {
+        if (view.getId() == R.id.searchButton) {
+            startSearch();
 
-                // Start NewActivity.class
-                Intent myIntent = new Intent(HomePage.this, Profile.class);
-                startActivity(myIntent);
-            }
-        });
+        }
+    }
+    public void startProfile() {
+        Intent i = new Intent(HomePage.this, Profile.class);
+        startActivity(i);
+    }
+    public void startSearch() {
+        Intent i = new Intent(HomePage.this, ReceipeSearch.class);
+        startActivity(i);
     }
 }

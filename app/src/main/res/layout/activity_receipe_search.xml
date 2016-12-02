@@ -146,9 +146,9 @@
 
                 <CheckBox
                     android:text="No Seafood"
-                    android:layout_width="wrap_content"
-                    android:layout_height="38dp"
-                    android:id="@+id/SeaCheck" />
+                    android:id="@+id/SeaCheck"
+                    android:layout_height="45dp"
+                    android:layout_width="82dp" />
 
             </LinearLayout>
 
