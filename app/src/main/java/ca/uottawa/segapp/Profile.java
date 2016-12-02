@@ -24,7 +24,7 @@ public class Profile extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {
-        ImageView images = (ImageView) findViewById(R.id.images); //FIX THIS
+        ImageView images = (ImageView) findViewById(R.id.images); //FIX THIS ahhhhhh
         //Figuring out the correct image
         String drawableName = "profile1";
         switch (data.getIntExtra("imageID",R.id.profile1)) {
