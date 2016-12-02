@@ -58,7 +58,7 @@
                     android:inputType="textPersonName"
                     android:text="Search"
                     android:ems="10"
-                    android:id="@+id/SearchText" />
+                    android:id="@+id/SearchText"/>
 
                 <ExpandableListView
                     android:layout_weight="3.70"
@@ -85,13 +85,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <EditText
+                <TextView
                     android:layout_width="108dp"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
                     android:text="Meal Type:"
                     android:ems="10"
-                    android:id="@+id/MealType" />
+                    android:id="@+id/MealType"/>
 
                 <CheckBox
                     android:text="Breakfast"
@@ -124,13 +123,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <EditText
+                <TextView
                     android:layout_width="82dp"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
                     android:text="Allergy"
                     android:ems="10"
-                    android:id="@+id/AllergyText" />
+                    android:id="@+id/AllergyText"/>
 
                 <CheckBox
                     android:text="No Peanut"
@@ -162,13 +160,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <EditText
+                    <TextView
                         android:layout_width="88dp"
                         android:layout_height="wrap_content"
-                        android:inputType="textPersonName"
                         android:text="Ingredients"
                         android:ems="10"
-                        android:id="@+id/IngredientsText" />
+                        android:id="@+id/IngredientsText"/>
 
                     <EditText
                         android:layout_width="wrap_content"
@@ -187,18 +184,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp" />
 
-            <LinearLayout
-                android:orientation="vertical"
+            <Button
+                android:text="Back to homepage"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:id="@+id/backToHomeButton"
+                android:background="?attr/colorControlHighlight"
+                android:onClick="goToHomepage" />
 
-                <Button
-                    android:text="Back to homapage"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/BackButton"
-                    android:background="?attr/colorControlHighlight" />
-            </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>

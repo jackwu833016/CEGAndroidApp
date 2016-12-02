@@ -3,20 +3,53 @@ package ca.uottawa.segapp;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 
 public class Profile extends AppCompatActivity {
-@Override
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        ImageView images = (ImageView) findViewById(R.id.images); //FIX THIS
+        //Figuring out the correct image
+        String drawableName = "profile1";
+        switch (data.getIntExtra("imageID",R.id.profile1)) {
+            case R.id.profile1:
+                drawableName = "profile1";
+                break;
+            case R.id.profile2:
+                drawableName = "profile2";
+                break;
+            case R.id.profile3:
+                drawableName = "profile3";
+                break;
+            case R.id.profile4:
+                drawableName = "profile4";
+                break;
+            case R.id.profile5:
+                drawableName = "profile5";
+                break;
+            default:
+                drawableName = "profile1";
+                break;
+        }
+        int resID = getResources().getIdentifier(drawableName, drawable,
+                getPackageName());
+        images.setImageResource(resID);
     }
 
     //goTo methods
@@ -66,10 +99,5 @@ public class Profile extends AppCompatActivity {
     {
         SharedPreferences prefs = context.getSharedPreferences("CEGAndroidApp", 0);
         return prefs.getString("editText5", "");
-    }
-
-    public static String getImage(Context context)
-    {
-        SharedPreferences prefs = context.getSharedPreferences("CEGAndroidApp", 0);
     }
 }

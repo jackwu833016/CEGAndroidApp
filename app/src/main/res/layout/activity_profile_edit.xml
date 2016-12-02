@@ -121,14 +121,23 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
+    <Button
+        android:text="Done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="goToProfile" />
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="53dp"
-        android:layout_above="@+id/textView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_marginBottom="24dp"
+        android:layout_above="@+id/button"
+        android:layout_centerHorizontal="true">
 
         <GridLayout
             android:layout_height="match_parent"
@@ -138,60 +147,40 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true">
 
-            <ImageButton
-                app:srcCompat="@drawable/profile4"
-                android:id="@+id/imageButton4"
-                android:layout_row="1"
-                android:layout_column="1"
+            <ImageView
+                android:layout_width="50dp"
                 android:layout_height="84dp"
-                android:layout_width="50dp" />
+                app:srcCompat="@drawable/profile5"
+                android:id="@+id/profile5"
+                android:onClick="setProfileImage" />
 
-            <ImageButton
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="84dp"
+                app:srcCompat="@drawable/profile4"
+                android:id="@+id/profile4"
+                android:onClick="setProfileImage" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="84dp"
+                app:srcCompat="@drawable/profile3"
+                android:id="@+id/profile3"
+                android:onClick="setProfileImage" />
+
+            <ImageView
+                android:layout_width="50dp"
                 android:layout_height="84dp"
                 app:srcCompat="@drawable/profile2"
-                android:id="@+id/imageButton2"
-                android:layout_width="50dp"
-                android:layout_row="1"
-                android:layout_column="2" />
+                android:id="@+id/profile2"
+                android:onClick="setProfileImage" />
 
-            <ImageButton
+            <ImageView
+                android:layout_width="50dp"
                 android:layout_height="84dp"
                 app:srcCompat="@drawable/profile1"
-                android:id="@+id/imageButton"
-                android:layout_marginLeft="43dp"
-                android:layout_marginStart="43dp"
-                android:layout_alignParentTop="true"
-                android:layout_toRightOf="@+id/textView9"
-                android:layout_toEndOf="@+id/textView9"
-                android:layout_row="1"
-                android:layout_column="0"
-                android:layout_width="50dp" />
-
-            <ImageButton
-                app:srcCompat="@drawable/profile3"
-                android:id="@+id/imageButton3"
-                android:layout_height="84dp"
-                android:layout_row="1"
-                android:layout_column="3"
-                android:layout_width="50dp" />
-
-            <ImageButton
-                app:srcCompat="@drawable/profile5"
-                android:id="@+id/imageButton5"
-                android:layout_height="84dp"
-                android:layout_row="1"
-                android:layout_column="4"
-                android:layout_width="50dp" />
-
+                android:id="@+id/profile1"
+                android:onClick="setProfileImage" />
         </GridLayout>
     </LinearLayout>
-
-    <Button
-        android:text="Done"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
 </RelativeLayout>

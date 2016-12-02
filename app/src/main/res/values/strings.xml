@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SEGApp</string>
+    <string name="helpPageText">How to use the App:\t \\n - Login with user name and password \\n - Click “Add” or ”Add new Recipt” button to add new receipe \\n - Find receipe by clicking “Find a receipe” button \\n - Click Delete button to delete receipe \\n - Click Edit button to edit saved receipe \\n - Click receipt image to open saved receipe \\n\t \\nHow to navigate: \\n - go back to last page by clicking the “back” button at bottom left \\n - go back to home page by clicking “back to homepage” button</string>
 </resources>

@@ -4,12 +4,6 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.view.View.OnClickListener;
-import android.widget.Toast;
-
-
-import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 public class HomePage extends AppCompatActivity {
 
@@ -18,6 +12,14 @@ public class HomePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
     }
+
+    public void goToHelp(View view) {
+
+        if (view.getId() == R.id.helppButton) {
+            startHelpPage();
+        }
+    }
+
     public void goToProfile(View view) {
 
         if (view.getId() == R.id.profileButton) {
@@ -32,6 +34,15 @@ public class HomePage extends AppCompatActivity {
 
         }
     }
+
+
+
+
+    public void startHelpPage(){
+        Intent i = new Intent(HomePage.this, Help.class);
+        startActivity(i);
+    }
+
     public void startProfile() {
         Intent i = new Intent(HomePage.this, Profile.class);
         startActivity(i);
@@ -40,4 +51,6 @@ public class HomePage extends AppCompatActivity {
         Intent i = new Intent(HomePage.this, ReceipeSearch.class);
         startActivity(i);
     }
+
+
 }
