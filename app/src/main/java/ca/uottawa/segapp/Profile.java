@@ -1,4 +1,6 @@
 package ca.uottawa.segapp;
 
-public class Profile {
+import android.support.v7.app.AppCompatActivity;
+
+public class Profile extends AppCompatActivity {
 }
